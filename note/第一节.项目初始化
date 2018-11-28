@@ -1,0 +1,39 @@
+一.环境安装
+    node 8.12.0
+    npm 6.4.1
+    webpack 4.19.1
+二.nuxt.js脚手架生成模板
+    (1)首先需要全局安装 npx
+    npm install -g npx@10.2.0
+    (2)使用脚手架生成工程目录
+    npx create-nuxt-app mt-app(项目名)
+三.安装依赖，启动项目
+    npm install 
+    npm run dev
+    为避免出现问题，重新编译一下
+    npm install  --update-binary
+四.一些主要问题
+    nuxt.j模板server端使用的common.js的模块化方案，不支持es6的import引入的方式。
+    我们执行npm run dev 默认执行"dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",没有经过babel处理，所以不支持import方法。
+    那么如何让这条命领执行，经过babel处理呢，cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node
+    同时还要告诉babel处理那个版本的es。
+    新建.babelrc文件指定一个指令级同时安装babel-preset-es2015插件。
+    {
+        "presets":["es2015"]
+    }
+    npm install babel-preset-es2015@6.24.1
+    npm install babel-cli babel-core
+五.在nuxt.js中使用sass
+    <style lang='scss'>
+
+    .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    </style>
+
+    然后安装npm install sass-loader node-sass
