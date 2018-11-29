@@ -37,3 +37,6 @@
     </style>
 
     然后安装npm install sass-loader node-sass
+
+    git remote add origin https://github.com/codeBoyxxx/mt-app-dev.git
+    git push -u origin master
