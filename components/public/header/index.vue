@@ -26,4 +26,5 @@ export default {
 
 <style lang="scss">
 @import "@/assets/css/public/header/index.scss";
+
 </style>

@@ -6,7 +6,7 @@
            </el-col>
            <el-col :span="15" class="center">
                <div class="wrapper">
-                   <el-input v-model="search" placeholder="搜索商家或地点" @focus="focus" @blur="blur" @input="input"/>
+                   <el-input  v-model="search" placeholder="搜索商家或地点" @focus="focus" @blur="blur" @input="input"/>
                    <button class="el-button el-button--primary"><i class="el-icon-search"/></button>
                     <dl class="hotPlace" v-if="isHotplace">
                         <dt>热门搜索</dt>
@@ -89,5 +89,5 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
 </style>
