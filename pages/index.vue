@@ -4,7 +4,7 @@
       <el-col :span='5'>
         <Emenu />
       </el-col>
-      <el-row :span='19'>2</el-row>
+      <!-- <el-row :span='19'>2</el-row> -->
     </el-row>
     <el-row :span='24'>
       3
