@@ -1,5 +1,5 @@
 export default {
-    ads:'mongodb://127.0.0.1:27017/student',
+    dbs:'mongodb://127.0.0.1:27017/student',
     redis:{
         get host(){
             return '127.0.0.1'
