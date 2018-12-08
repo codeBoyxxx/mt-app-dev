@@ -33,6 +33,7 @@
           class="btn-login"
           type="success"
           size="mini"
+          @click="login"
           >登录</el-button>
       </div>
     </div>
@@ -40,6 +41,7 @@
 </template>
 
 <script>
+import CryptoJS from 'crypto-js'
 export default {
   data: () => {
     return {

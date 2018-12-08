@@ -17,6 +17,7 @@ router.post('/signup',async (ctx)=>{
     const {
         username,
         password,
+        email,
         code
     } = ctx.request.body
 
