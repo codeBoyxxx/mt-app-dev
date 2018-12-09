@@ -1,0 +1,23 @@
+一.城市定位接口如何开发
+(1)先定义接口
+    import Router from 'koa-router'
+
+    let router = new Router({
+        prefix:'/geo'
+    })
+
+    router.get('/getPosition',async (ctx)=>{
+        ctx.body = {
+            code:0,
+            msg:'成功'
+        }
+    })
+
+    export default router
+(2)然后在server/index.js文件中导入,配置路由
+    import users from './interface/users'
+    import geo from './interface/geo'
+
+      // 配置路由信息
+    app.use(users.routes()).use(users.allowedMethods())
+    app.use(geo.routes()).use(geo.allowedMethods())
